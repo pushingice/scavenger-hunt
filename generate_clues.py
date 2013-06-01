@@ -38,12 +38,12 @@ if __name__ == "__main__":
     clue_indexes = gen_clue_list(START_CLUE, LAST_CLUE,
                                  CLUE_SPACE, secret_number)
 
-    template_names = os.listdir("clue-templates")
+    template_names = os.listdir(".clue-templates")
     template_names.sort()
     template_data = []
 
     for t in template_names:
-        data = open("clue-templates/" + t, "r").read()
+        data = open(".clue-templates/" + t, "r").read()
         template_data.append(data)
 
     for i in range(0, CLUE_SPACE):
@@ -54,9 +54,10 @@ if __name__ == "__main__":
         if (i not in clue_indexes):
             file_name.write("Nothing to see here.\n")
         else:
-            clue_no = START_CLUE + clue_indexes.index(i)
-            template_index = clue_no - START_CLUE - 1
+
+            template_index = clue_indexes.index(i)
+
             if (template_index < len(template_data)):
                 file_name.write(template_data[template_index])
             else:
-                file_name.write("Clue: " + str(clue_no) + '\n')
+                file_name.write("Clue: \n")

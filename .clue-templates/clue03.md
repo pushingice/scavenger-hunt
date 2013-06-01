@@ -20,4 +20,26 @@ computer. Binary files are sometimes referred to as "machine-readable".
 
 #### `/bin` ####
 
-One place you can always find binaries on a Linux system is in `/bin`.
+One place you can always find binaries on a Linux system is in `/bin`. These
+binaries are programs: if you `ls` in `/bin` you may recoginze some of them
+(including `ls` itself). This is also a convenient way to get a list of
+commands.
+
+If you want to see the garbage view of a binary, you can `cat` or
+`less` one of them. You can even `cat cat` or `less less`. On some Linux
+systems you can see the hex itself with `hexdump`.
+
+#### `/etc` ####
+
+This directory is named after the latin *et cetera* but is usally pronounced
+"et C". There are many text (and some binarry) files here that are used to
+configure the system. Humans and computers can both read these files to find
+out how to configure the system.
+
+For example, look at the `/etc/fstab` file. This describes how the filesystem
+is mapped to the hard drive.
+
+#### Clue 4 ####
+
+Your hint for clue 4 is the file `/etc/hostname`. This file contains a single
+word, which is the name of your computer. This name is your hint.
