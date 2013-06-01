@@ -1,28 +1,31 @@
 ## Commands Used ##
 
-* `ls`
-* `man`
-* `cd`
 * `cat`
-* `pwd`
+* `cd`
 * `less`
+* `ls`
 * `hexdump`
+* `man`
+* `pwd`
 
 ## Locations Visited ##
 
-* `/usr`
 * `/bin`
 * `/etc`
+* `/home`
+* `/usr`
 
 ## Vocabulary ##
 
+* Binary
 * Bit
 * Byte
-* Binary
-* Text
-* Human-readable
-* Machine-readable
+* Directory
 * File
 * Folder
-* Directory
+* GIGO
+* Hexadecimal
+* Human-readable
+* Machine-readable
+* Text
 * Subdirectory

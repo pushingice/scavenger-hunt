@@ -14,11 +14,11 @@ We are five folders deep, in a folder named `123456`.
 Change directory is extremely useful, but it can also be confusing. We
 already saw how you can move up one directory (`cd ..`) or down one directory
 (`cd [dir]`). You can move up or down any number of directories in a single
-command like this (this command won't actually work here):
+command like this (won't actually work here):
 
     `cd ../../../one/two/`
 
-This would navigate you up 3 directories relative to where you are, then down
+You would navigate up 3 directories relative to where you are, then down
 into directory one and then two. This is what's known as a relative path: it
 depends on where you start where you will end up. The other way to change
 directories is with absolute paths. Try this:
@@ -42,7 +42,7 @@ So, if there were 5 directories, we would type
 
 since our secret number is 42, we want to find clue 3, and our hint is 5.
 The location of our next clue should be printed. If you get the hint wrong,
-an incorrect clue will be printed. This is known in computing as GIGO
+an incorrect clue will be printed. This is an example of what is known as GIGO
 (garbage-in, garbage-out).
 
 #### `less` ####

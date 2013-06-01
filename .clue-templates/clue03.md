@@ -8,11 +8,12 @@ example, the file you are reading right now is text.
 
 Binary is a number system that uses only 0 and 1 as digits. For example, 42 is
 represented as 101010 in binary. Each digit is called a "bit". Eight bits is
-called a "byte". There are 2^8 = 256 possible bytes. Computers use a shorthand
-for each byte called "hexadecimal" or more briefly "hex". In hex there are
-sixteen digits, the usual 0-9 and also A-F. A is equal to 10, B to 11, *etc*.
-Sometimes we write a `0x` in front of a hex number to indicate we are using
-hex: 42 is `0x2A`.
+called a "byte". There are 2^8 = 256 possible bytes. Bytes are a fundamental
+unit of measurement in computing (*e.g.* file sizes are in bytes). Computers
+use a shorthand for each byte called "hexadecimal" or more briefly "hex". In
+hex there are sixteen digits, the usual 0-9 and also A-F. A is equal to 10,
+B to 11, *etc*. Sometimes we write a `0x` in front of a hex number to indicate
+we are using hex: 42 is `0x2A`.
 
 If you ever look at a file and see a bunch of "garbage", you are probably
 looking at a binary file. The content isn't intended for you: it's for the
@@ -32,7 +33,7 @@ systems you can see the hex itself with `hexdump`.
 #### `/etc` ####
 
 This directory is named after the latin *et cetera* but is usally pronounced
-"et C". There are many text (and some binarry) files here that are used to
+"et see". There are many text (and some binary) files here that are used to
 configure the system. Humans and computers can both read these files to find
 out how to configure the system.
 
