@@ -7,10 +7,14 @@ import generate_clues as gc
 def check_hint(clue, hint):
     if (clue == 3):
         count = len(os.listdir("/usr"))
-        return hint == count
+        return int(hint) == count
     elif (clue == 4):
         hostname = open("/etc/hostname", "r").read().strip()
         return hint == hostname
+    elif (clue == 5):
+        return hint in ["i","n","-i","-n"]
+    elif (clue == 6):
+        return hint == os.getenv("PATH").split(":")[0]
 
 if __name__ == "__main__":
 
@@ -24,14 +28,14 @@ if __name__ == "__main__":
                                     gc.CLUE_SPACE, secret_number)
     print clue_indexes
     if (check_hint(clue_number, hint)):
-        print clue_indexes[clue_number - gc.START_CLUE]
+        print gc.zero_pad(clue_indexes[clue_number - gc.START_CLUE])
     else:
         R = random.Random()
         if (type(hint) == str):
             md5 = hashlib.md5(hint)
             hint_number = int(md5.hexdigest(),16)
         R.seed(secret_number + clue_number + hint_number)
-        print R.randint(1, gc.CLUE_SPACE)
+        print gc.zero_pad(R.randint(1, gc.CLUE_SPACE))
 
 
 

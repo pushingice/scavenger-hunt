@@ -8,7 +8,7 @@ example, the file you are reading right now is text.
 
 Binary is a number system that uses only 0 and 1 as digits. For example, 42 is
 represented as 101010 in binary. Each digit is called a "bit". Eight bits is
-called a "byte". There are 2^8 = 256 possible bytes. Bytes are a fundamental
+called a "byte". There are 256 possible bytes (2^8). Bytes are a fundamental
 unit of measurement in computing (*e.g.* file sizes are in bytes). Computers
 use a shorthand for each byte called "hexadecimal" or more briefly "hex". In
 hex there are sixteen digits, the usual 0-9 and also A-F. A is equal to 10,
@@ -40,7 +40,10 @@ out how to configure the system.
 For example, look at the `/etc/fstab` file. This describes how the filesystem
 is mapped to the hard drive.
 
-#### Clue 4 ####
+#### Find Clue 4 ####
 
 Your hint for clue 4 is the file `/etc/hostname`. This file contains a single
-word, which is the name of your computer. This name is your hint.
+word, which is the name of your computer. This name is your hint. Remember we
+can find the next hint by typing
+
+    python next_clue.py [secret number] [next clue number] [hint]

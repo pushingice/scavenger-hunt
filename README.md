@@ -11,9 +11,9 @@ Git first (`sudo apt-get install git` on Ubuntu). Open a terminal and type:
     git clone https://github.com/pushingice/scavenger-hunt.git
     cd scavenger-hunt
 
-First, choose a secret number to share with your team, or keep
-to yourself if you are working alone. Don't forget it! The secret number
-makes your clues unique, so other teams can't look over your shoulder.
+First, choose a secret number with at least 4 digits to share with your team,
+or keep to yourself if you are working alone. Don't forget it! The secret
+number makes your clues unique, so other teams can't look over your shoulder.
 Then type:
 
     python generate_clues.py [secret number]
@@ -24,8 +24,13 @@ might type:
 
     python generate_clues.py 42
 
-This will create a subdirectory called `clues`. Keep this README open in a
-separate viewer.
+This will create a subdirectory called `clues`. Be sure to Keep this file
+(called the README) open in a separate viewer.
+
+## Reference ##
+
+If you want to learn more about Linux when you are finished, or need a reference
+during the hunt, go here: http://www.tldp.org/LDP/intro-linux/html/index.html.
 
 ### Clue 1: The Hunt Begins ###
 
@@ -41,10 +46,10 @@ The next command we need to learn is `ls` (list). Type `man ls` and read the
 description. Press `q` to exit. Then type `ls` and you should see something
 like this:
 
-    clues generate_clues.py next_clue.py README.md
+    APPENDIX.md clues generate_clues.py LICENSE.md next_clue.py README.md
 
-The first item is directory and the next two are files. Any time you need to
-know which files and directories are available, type `ls`.
+Items which are blue are directories and everything else is a file. Any time
+you need to know which files and directories are available, type `ls`.
 
 #### `cd` ####
 

@@ -5,8 +5,17 @@ import random
 START_CLUE = 2
 LAST_CLUE = 10
 #CLUE_SPACE = 1000000
-CLUE_SPACE = 100
-FIRST_CLUE = 12
+CLUE_SPACE = 1000
+# should be consecutive digits of the form 1234...
+FIRST_CLUE = 123
+
+def zero_pad(clue):
+    l = len(str(clue))
+    m = len(str(CLUE_SPACE)) - 1
+    if l < m:
+        return "0"*(m-l) + str(clue)
+    else:
+        return str(clue)
 
 def gen_clue_list(first, last, space, secret):
     R = random.Random()
@@ -58,6 +67,12 @@ if __name__ == "__main__":
             template_index = clue_indexes.index(i)
 
             if (template_index < len(template_data)):
-                file_name.write(template_data[template_index])
+                if (template_index == 2):
+                    print template_index, clue_indexes[1]
+                    file_name.write(template_data[template_index]
+                                    .format(zero_pad(clue_indexes[1]),
+                                            zero_pad(clue_indexes[0])))
+                else:
+                    file_name.write(template_data[template_index])
             else:
                 file_name.write("Clue: \n")

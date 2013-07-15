@@ -2,10 +2,14 @@
 
 * `cat`
 * `cd`
+* `cp`
+* `echo`
 * `less`
 * `ls`
 * `hexdump`
 * `man`
+* `mkdir`
+* `mv`
 * `pwd`
 
 ## Locations Visited ##
@@ -27,5 +31,8 @@
 * Hexadecimal
 * Human-readable
 * Machine-readable
-* Text
+* Option
+* Redirect
 * Subdirectory
+* Text
+
