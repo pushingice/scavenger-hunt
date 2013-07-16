@@ -4,7 +4,7 @@ import random
 
 START_CLUE = 2
 LAST_CLUE = 10
-#CLUE_SPACE = 1000000
+#CLUE_SPACE = 100000
 CLUE_SPACE = 1000
 # should be consecutive digits of the form 1234...
 FIRST_CLUE = 123
@@ -55,6 +55,7 @@ if __name__ == "__main__":
         data = open(".clue-templates/" + t, "r").read()
         template_data.append(data)
 
+    print("Hiding clues...")
     for i in range(0, CLUE_SPACE):
         dir_name = "clues/" + \
             "0"*(len(str(CLUE_SPACE))-1 - len(str(i))) + str(i)
@@ -68,7 +69,7 @@ if __name__ == "__main__":
 
             if (template_index < len(template_data)):
                 if (template_index == 2):
-                    print template_index, clue_indexes[1]
+                    #print template_index, clue_indexes[1]
                     file_name.write(template_data[template_index]
                                     .format(zero_pad(clue_indexes[1]),
                                             zero_pad(clue_indexes[0])))
@@ -76,3 +77,4 @@ if __name__ == "__main__":
                     file_name.write(template_data[template_index])
             else:
                 file_name.write("Clue: \n")
+    print("Done hiding clues.")

@@ -11,6 +11,7 @@
 * `mkdir`
 * `mv`
 * `pwd`
+* `which`
 
 ## Locations Visited ##
 

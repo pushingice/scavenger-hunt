@@ -15,6 +15,9 @@ def check_hint(clue, hint):
         return hint in ["i","n","-i","-n"]
     elif (clue == 6):
         return hint == os.getenv("PATH").split(":")[0]
+    elif (clue == 7):
+        return hint == os.popen2("which python")[1].read().strip()
+    
 
 if __name__ == "__main__":
 

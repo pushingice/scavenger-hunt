@@ -71,7 +71,7 @@ If you ever get lost, just do
 to return home. If you `cd` to the `clues` directory and do an `ls`, you
 will notice that there are a lot of clue directories. Most of them contain
 fake clues. Throughout our hunt we will be looking for real clues. Using
-`cd`, navigate to `clues/123456` and type `ls`. You should see a single
+`cd`, navigate to `clues/12345` and type `ls`. You should see a single
 file named `clue`.
 
 #### `cat` ####
