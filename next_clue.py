@@ -17,6 +17,8 @@ def check_hint(clue, hint):
         return hint == os.getenv("PATH").split(":")[0]
     elif (clue == 7):
         return hint == os.popen2("which python")[1].read().strip()
+    elif (clue == 8):
+        return hint == "acpi"
     
 
 if __name__ == "__main__":
