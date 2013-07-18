@@ -19,6 +19,16 @@ def check_hint(clue, hint):
         return hint == os.popen2("which python")[1].read().strip()
     elif (clue == 8):
         return hint == "acpi"
+    elif (clue == 9):
+        return hint == os.popen2("wc -l /usr/share/dict/words")\
+            [1].read().strip().split()[0]
+    elif (clue == 10):
+        return hint == os.popen2("grep -A 1 sanitizing /usr/share/dict/words")\
+            [1].read().strip().split('\n')[1]
+    elif (clue == 11):
+        return hint in ("-k 5 -n -r", "-k 5 -r -n", "-r -k 5 -n", "-r -n -k 5",\
+            "-n -r -k 5", "-n -k 5 -r")
+
     
 
 if __name__ == "__main__":

@@ -3,7 +3,7 @@ import sys
 import random
 
 START_CLUE = 2
-LAST_CLUE = 10
+LAST_CLUE = 12
 #CLUE_SPACE = 100000
 CLUE_SPACE = 1000
 # should be consecutive digits of the form 1234...

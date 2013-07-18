@@ -1,9 +1,11 @@
 ## Commands Used ##
 
+* `apt-get`
 * `cat`
 * `cd`
 * `cp`
 * `echo`
+* `grep`
 * `less`
 * `ls`
 * `hexdump`
@@ -11,7 +13,12 @@
 * `mkdir`
 * `mv`
 * `pwd`
+* `python`
+* `sort`
+* `sudo`
+* `wc`
 * `which`
+* `vim`
 
 ## Locations Visited ##
 
@@ -19,6 +26,7 @@
 * `/etc`
 * `/home`
 * `/usr`
+* `/sys`
 
 ## Vocabulary ##
 
@@ -26,6 +34,7 @@
 * Bit
 * Byte
 * Directory
+* Editor
 * File
 * Folder
 * GIGO
