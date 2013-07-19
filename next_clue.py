@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
     clue_indexes = gc.gen_clue_list(gc.START_CLUE, gc.LAST_CLUE,
                                     gc.CLUE_SPACE, secret_number)
-    print clue_indexes
+    #print clue_indexes
     if (check_hint(clue_number, hint)):
         print gc.zero_pad(clue_indexes[clue_number - gc.START_CLUE])
     else:

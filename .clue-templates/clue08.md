@@ -1,4 +1,4 @@
-### Clue 8: Who's Counting? ###
+### Clue 8: Counting Words ###
 
 #### `wc` ####
 
@@ -12,6 +12,10 @@ you just want one of those, you can use `-l`, `-w`, or `-c`.
 
 #### Finding Clue 9 ####
 
-There is a file that acts as a dictionary for spell-checking: 
+First run this:
+
+    sudo apt-get install ispell
+
+Now there is a file that acts as a dictionary for spell-checking: 
 `/usr/share/dict/words`. Your next clue is the number of words in the 
 dictionary.
