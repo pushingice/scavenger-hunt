@@ -20,7 +20,7 @@ between them. Check the man page for many interesting features of `grep`.
 
 #### Finding Clue 10 ####
 
-The next hint is the word that occurs after "sanitizing" in 
+The next hint is the word that occurs after "tactful" in 
 `/usr/share/dict/words`. There's a specific option for `grep` that will make
 this easy.
 

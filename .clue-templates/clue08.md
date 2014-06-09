@@ -12,7 +12,8 @@ you just want one of those, you can use `-l`, `-w`, or `-c`.
 
 #### Finding Clue 9 ####
 
-First run this:
+Check to see if you have the file `/usr/share/dict/words` installed. If not,
+run this:
 
     sudo apt-get install ispell
 
