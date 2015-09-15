@@ -24,7 +24,7 @@ might type:
 
     python generate_clues.py 42
 
-This will create a subdirectory called `clues`. Be sure to Keep this file
+This will create a subdirectory called `clues`. Be sure to keep this file
 (called the README) open in a separate viewer.
 
 ## Reference ##
