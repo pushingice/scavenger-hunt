@@ -16,14 +16,14 @@ already saw how you can move up one directory (`cd ..`) or down one directory
 (`cd [dir]`). You can move up or down any number of directories in a single
 command like this (won't actually work here):
 
-    `cd ../../../one/two/`
+    cd ../../../one/two/
 
 You would navigate up 3 directories relative to where you are, then down
 into directory one and then two. This is what's known as a relative path: it
 depends on where you start where you will end up. The other way to change
 directories is with absolute paths. Try this:
 
-    `cd /`
+    cd /
 
 Look around and see what's there. This is known as the root path. You can
 explore the entire file system from here, using just `ls` and `cd`.
