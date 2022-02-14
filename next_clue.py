@@ -26,8 +26,15 @@ def check_hint(clue, hint):
         return hint == os.popen2("grep -A 1 tactful /usr/share/dict/words")\
             [1].read().strip().split('\n')[1]
     elif (clue == 11):
-        return hint in ("-k 5 -n -r", "-k 5 -r -n", "-r -k 5 -n", "-r -n -k 5",\
-            "-n -r -k 5", "-n -k 5 -r")
+        if not hint.startswith("-"):
+            return False
+        if not ("k 5" in hint or "k5" in hint):
+            return False
+        if not "r" in hint:
+            return False
+        if not ("n" in hint or "g" in hint):
+            return False
+        return True
 
     
 
@@ -43,14 +50,14 @@ if __name__ == "__main__":
                                     gc.CLUE_SPACE, secret_number)
     #print clue_indexes
     if (check_hint(clue_number, hint)):
-        print gc.zero_pad(clue_indexes[clue_number - gc.START_CLUE])
+        print(gc.zero_pad(clue_indexes[clue_number - gc.START_CLUE]))
     else:
         R = random.Random()
         if (type(hint) == str):
-            md5 = hashlib.md5(hint)
+            md5 = hashlib.md5(hint.encode())
             hint_number = int(md5.hexdigest(),16)
         R.seed(secret_number + clue_number + hint_number)
-        print gc.zero_pad(R.randint(1, gc.CLUE_SPACE))
+        print(gc.zero_pad(R.randint(1, gc.CLUE_SPACE)))
 
 
 
