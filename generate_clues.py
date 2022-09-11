@@ -5,8 +5,6 @@ import random
 START_CLUE = 2
 LAST_CLUE = 12
 CLUE_SPACE = 100000
-#CLUE_SPACE = 1000
-# should be consecutive digits of the form 1234...
 FIRST_CLUE = 12345
 
 def zero_pad(clue):
@@ -32,20 +30,26 @@ if __name__ == "__main__":
         sys.exit("Need a secret number")
     secret_number = int(sys.argv[1])
 
-    result = ""
     try:
-        result = os.stat("clues")
-    except:
-        pass
+       val = open("conf", "r").read().strip()
+       words = open(val, "r").read().strip()
+    except FileNotFoundError:
+       sys.exit("Unable to locate dictionary file. Please check README.md")
 
-    if (result):
+    try:
+        os.stat("clues")
         sys.exit("Clues folder already exists.")
-
-    if (not result):
+    except FileNotFoundError:
         os.mkdir("clues")
 
     clue_indexes = gen_clue_list(START_CLUE, LAST_CLUE,
                                  CLUE_SPACE, secret_number)
+    
+    try:
+       val = open("conf", "r").read().strip()
+       words = open(val, "r").read().strip()
+    except FileNotFoundError:
+       sys.exit("Unable to locate dictionary file. Please check README.md")
 
     template_names = os.listdir(".clue-templates")
     template_names.sort()

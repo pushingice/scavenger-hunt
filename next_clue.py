@@ -3,8 +3,14 @@ import sys
 import random
 import hashlib
 import generate_clues as gc
+import subprocess as sp
 
-def check_hint(clue, hint):
+
+def shell_out(comm):
+    return sp.run(comm.split(), capture_output=True).stdout.decode()
+
+
+def check_hint(clue, hint, dictionary):
     if (clue == 3):
         count = len(os.listdir("/usr"))
         return int(hint) == count
@@ -16,15 +22,15 @@ def check_hint(clue, hint):
     elif (clue == 6):
         return hint == os.getenv("PATH").split(":")[0]
     elif (clue == 7):
-        return hint == os.popen2("which python")[1].read().strip()
+        return hint == shell_out("which python").strip()
     elif (clue == 8):
         return hint in ["acpi", "denied"]
     elif (clue == 9):
-        return hint == os.popen2("wc -l /usr/share/dict/words")\
-            [1].read().strip().split()[0]
+        val = shell_out(f"wc -l {dictionary}").split()[0]
+        print(val)
+        return hint == val
     elif (clue == 10):
-        return hint == os.popen2("grep -A 1 tactful /usr/share/dict/words")\
-            [1].read().strip().split('\n')[1]
+        return hint == shell_out(f"grep -A 1 tactful {dictionary}").strip().split('\n')[1]
     elif (clue == 11):
         if not hint.startswith("-"):
             return False
@@ -37,7 +43,6 @@ def check_hint(clue, hint):
         return True
 
     
-
 if __name__ == "__main__":
 
     if (len(sys.argv) != 4):
@@ -48,8 +53,9 @@ if __name__ == "__main__":
 
     clue_indexes = gc.gen_clue_list(gc.START_CLUE, gc.LAST_CLUE,
                                     gc.CLUE_SPACE, secret_number)
-    #print clue_indexes
-    if (check_hint(clue_number, hint)):
+    dictionary = open("conf", "r").read().strip()
+    
+    if (check_hint(clue_number, hint, dictionary)):
         print(gc.zero_pad(clue_indexes[clue_number - gc.START_CLUE]))
     else:
         R = random.Random()
@@ -58,6 +64,3 @@ if __name__ == "__main__":
             hint_number = int(md5.hexdigest(),16)
         R.seed(secret_number + clue_number + hint_number)
         print(gc.zero_pad(R.randint(1, gc.CLUE_SPACE)))
-
-
-

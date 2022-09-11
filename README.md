@@ -18,6 +18,8 @@ Then type:
 
     python generate_clues.py [secret number]
 
+NOTE: On some older systems 'python' may need to be typed as 'python3'.
+
 Any time we enclose something in square brackets, you need to replace it
 with an actual value (called an argument). For example, to get started I
 might type:
@@ -26,6 +28,16 @@ might type:
 
 This will create a subdirectory called `clues`. Be sure to keep this file
 (called the README) open in a separate viewer.
+
+### Dictionary Location ###
+
+This code is tested on Ubuntu 22.04. If you get an error about being unable
+to find your dictionary, try the following commands
+
+    cd /
+    find . -name words
+
+Change the value of the 'conf' file to the location of your dictionary.
 
 ## Reference ##
 
