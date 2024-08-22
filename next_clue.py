@@ -22,7 +22,7 @@ def check_hint(clue, hint, dictionary):
     elif (clue == 6):
         return hint == os.getenv("PATH").split(":")[0]
     elif (clue == 7):
-        return hint == shell_out("which python").strip()
+        return hint == shell_out("which touch").strip()
     elif (clue == 8):
         return hint in ["acpi", "denied"]
     elif (clue == 9):
