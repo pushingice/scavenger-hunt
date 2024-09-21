@@ -27,8 +27,12 @@ def gen_clue_list(first, last, space, secret):
 if __name__ == "__main__":
 
     if (len(sys.argv) != 2):
-        sys.exit("Need a secret number")
-    secret_number = int(sys.argv[1])
+        sys.exit("Need a single secret number, no spaces please")
+    try:
+        secret_number = int(sys.argv[1])
+        print("your secret number is: ", secret_number)
+    except ValueError:
+        print(sys.argv[1], "isn't a number")
 
     try:
        val = open("conf", "r").read().strip()
