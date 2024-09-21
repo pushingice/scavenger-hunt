@@ -12,10 +12,10 @@ Git first (`sudo apt-get install git` on Ubuntu). Open a terminal and type:
     cd scavenger-hunt
 
 First, choose a secret number to share with your team,
-or keep to yourself if you are working alone. Don't enter any spaces or non-number characters. Write down your secret number. The secret number makes your clues unique, so other teams can't look over your shoulder.
+or keep to yourself if you are working alone. Don't enter any extra spaces or non-number characters. Write down your secret number. The secret number makes your clues unique, so other teams can't look over your shoulder.
 Then type:
 
-    python generate_clues.py [secret number]
+    python generate_clues.py [secret_number]
 
 NOTE: On some older systems 'python' may need to be typed as 'python3'.
 
