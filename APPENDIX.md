@@ -1,4 +1,4 @@
-## Commands Used ##
+## Comandos usados ##
 
 * `apt-get`
 * `cat`
@@ -20,7 +20,7 @@
 * `which`
 * `vim`
 
-## Locations Visited ##
+## Directorios visitados ##
 
 * `/bin`
 * `/etc`
@@ -28,21 +28,21 @@
 * `/usr`
 * `/sys`
 
-## Vocabulary ##
+## Vocabulario ##
 
-* Binary
+* Archivo
+* Binario
 * Bit
 * Byte
-* Directory
+* Carpeta
+* Directorio
 * Editor
-* File
-* Folder
 * GIGO
 * Hexadecimal
-* Human-readable
-* Machine-readable
-* Option
-* Redirect
-* Subdirectory
-* Text
+* Leíble-para-Humanos
+* Leíble-para-Maquinas
+* Opción
+* Redirección
+* Subdirectorio
+* Texto
 
