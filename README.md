@@ -94,6 +94,6 @@ Finally we need to be able to look at our clues. First read the manpage for
 
 This should list the clue in your terminal. From now on, everything we need
 will be contained in these clue files. It's a good idea to keep track of
-all the clue folders (like `123456`) on a piece of paper. You can also do
+all the clue folders (like `12345`) on a piece of paper. You can also do
 things like copy all the clue files to your home folder, or cut and paste
 the clue text into another file.

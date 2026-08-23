@@ -20,7 +20,10 @@ def gen_clue_list(first, last, space, secret):
     R.seed(secret)
     clue_indexes = []
     for i in range(first, last+1):
-        clue_indexes.append(R.randint(1, space))
+        r = R.randint(1, space)
+        while r in clue_indexes:
+            r = R.randint(1, space)
+        clue_indexes.append(r)
     clue_indexes[0] = FIRST_CLUE
     return clue_indexes
 

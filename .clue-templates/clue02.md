@@ -5,9 +5,9 @@
 What if we get lost and need to know where we are? Just type `pwd` (print
 working directory). This should print something like this:
 
-    /home/user/scavenger-hunt/clues/123456
+    /home/user/scavenger-hunt/clues/12345
 
-We are five folders deep, in a folder named `123456`.
+We are five folders deep, in a folder named `12345`.
 
 #### `cd` ####
 
